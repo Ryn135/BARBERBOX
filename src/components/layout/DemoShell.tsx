@@ -37,10 +37,10 @@ export function DemoShell() {
           ))}
         </nav>
 
-        <div className="p-4 border-t border-white/10">
-          <Link to="/app" className="flex items-center gap-2 text-white/30 hover:text-white text-xs transition-colors">
+        <div className="p-4 border-t border-white/10 space-y-2">
+          <Link to="/" className="flex items-center gap-2 text-white/30 hover:text-white text-xs transition-colors">
             <ArrowLeft size={12} />
-            <span className="hidden md:block">Salir del demo</span>
+            <span className="hidden md:block">Volver al inicio</span>
           </Link>
         </div>
       </aside>
