@@ -57,6 +57,17 @@ export const useConfigStore = create<ConfigStore>()(
         set({ products: get().products.filter(p => p.id !== id) })
       },
     }),
-    { name: 'demo_config' }
+    {
+      name: 'demo_config',
+      merge: (persisted: unknown, current) => {
+        const p = (persisted ?? {}) as Partial<ConfigStore>
+        return {
+          ...current,
+          barbers:  Array.isArray(p.barbers)  ? p.barbers  : [],
+          services: Array.isArray(p.services) ? p.services : [],
+          products: Array.isArray(p.products) ? p.products : [],
+        }
+      },
+    }
   )
 )

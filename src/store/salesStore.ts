@@ -49,6 +49,15 @@ export const useSalesStore = create<SalesStore>()(
         set({ sales: get().sales.filter(s => s.id !== id) })
       },
     }),
-    { name: 'demo_sales' }
+    {
+      name: 'demo_sales',
+      merge: (persisted: unknown, current) => {
+        const p = (persisted ?? {}) as Partial<SalesStore>
+        return {
+          ...current,
+          sales: Array.isArray(p.sales) ? p.sales : [],
+        }
+      },
+    }
   )
 )

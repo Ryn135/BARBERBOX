@@ -30,6 +30,15 @@ export const useAppointmentStore = create<AppointmentStore>()(
         set({ appointments: get().appointments.filter(a => a.id !== id) })
       },
     }),
-    { name: 'demo_appointments' }
+    {
+      name: 'demo_appointments',
+      merge: (persisted: unknown, current) => {
+        const p = (persisted ?? {}) as Partial<AppointmentStore>
+        return {
+          ...current,
+          appointments: Array.isArray(p.appointments) ? p.appointments : [],
+        }
+      },
+    }
   )
 )
