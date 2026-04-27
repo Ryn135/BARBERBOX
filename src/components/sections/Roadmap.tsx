@@ -2,13 +2,11 @@ const phases = [
   {
     phase: 'Fase 01',
     title: 'Base del sistema',
-    price: '$80.000',
     status: 'done',
     items: [
-      'Setup del proyecto con React + TypeScript + Vite',
-      'Configuración de Tailwind CSS y sistema de diseño dark',
+      'Setup con React + TypeScript + Vite + Tailwind CSS',
       'Arquitectura de stores con Zustand + persistencia en localStorage',
-      'Routing con React Router v7 (Landing / App real / Modo demo)',
+      'Routing con React Router (Landing / App real / Modo demo)',
       'Separación total de datos: demo nunca contamina datos reales',
       'Deploy en GitHub Pages con GitHub Actions',
     ],
@@ -16,90 +14,153 @@ const phases = [
   {
     phase: 'Fase 02',
     title: 'Gestión de turnos',
-    price: '$120.000',
     status: 'done',
     items: [
-      'Calendario semanal navegable (semana anterior / siguiente)',
-      'Grilla de horarios por franja de 30 minutos (08:00 a 20:00)',
+      'Calendario semanal navegable con grilla de horarios por franja de 30 min',
       'Alta de turno con cliente, barbero, servicio y hora',
-      'Estados de turno: Pendiente, Confirmado, Completado, Cancelado',
+      'Estados: Pendiente, Confirmado, Completado, Cancelado, Ausente',
       'Modal de detalle con cambio de estado en un click',
-      'Vista responsive adaptada a mobile',
+      'Duración de turno configurable por barbero',
     ],
   },
   {
     phase: 'Fase 03',
     title: 'Punto de venta (POS)',
-    price: '$100.000',
     status: 'done',
     items: [
       'Catálogo de servicios y productos en grilla seleccionable',
-      'Carrito de compras con control de cantidades',
+      'Carrito con control de cantidades',
       'Selección de barbero y cálculo automático de comisión',
       'Métodos de pago: Efectivo, Transferencia, Tarjeta',
-      'Comprobante de venta con detalle por ítem y neto barbería',
+      'Comprobante de venta con detalle por ítem',
       'Descuento de stock automático al registrar venta de producto',
     ],
   },
   {
     phase: 'Fase 04',
     title: 'Dashboard financiero',
-    price: '$110.000',
     status: 'done',
     items: [
-      'KPIs en tiempo real: ingresos brutos, netos, comisiones, ticket promedio',
-      'Valor de inventario calculado desde stock actual',
+      'KPIs: ingresos brutos, netos, comisiones, ticket promedio, valor inventario',
       'Gráfico de área — ingresos últimos 30 días (bruto vs neto)',
-      'Gráfico de barras — rendimiento por barbero en período seleccionado',
+      'Gráfico de barras — rendimiento por barbero',
       'Gráfico de torta — distribución por método de pago',
-      'Filtros por rango: Hoy, Esta semana, Este mes, Últimos 30 días',
+      'Filtros por rango: Hoy, Semana, Mes, 30 días',
       'Listado de últimas ventas con opción de eliminar',
     ],
   },
   {
     phase: 'Fase 05',
     title: 'Configuración del negocio',
-    price: '$90.000',
     status: 'done',
     items: [
       'ABM de barberos: nombre, comisión (%) y duración de turno',
       'ABM de servicios: nombre y precio',
-      'ABM de productos: nombre, precio, stock actual y stock mínimo',
-      'Alertas visuales de stock bajo',
-      'Edición inline sin modales — experiencia fluida',
+      'ABM de productos: nombre, precio, stock y stock mínimo con alertas',
+      'Edición inline sin modales',
       'Modo demo con datos de ejemplo precargados y aislados',
     ],
   },
   {
     phase: 'Fase 06',
-    title: 'Backend + base de datos real',
-    price: '$200.000',
-    status: 'active',
+    title: 'Cierre de caja diario',
+    status: 'done',
     items: [
-      'API REST con Node.js / Express o Next.js App Router',
-      'Base de datos PostgreSQL con Prisma ORM',
-      'Autenticación con JWT — login seguro por barbería',
-      'Multi-tenant: cada barbería con sus propios datos en la nube',
-      'Migración de localStorage a base de datos real',
-      'Deploy en servidor (Railway / Render)',
+      'Resumen del día: ventas totales, comisiones y neto por barbero',
+      'Desglose por método de pago (Efectivo, Transferencia, Tarjeta)',
+      'Navegación entre fechas para ver cierres anteriores',
+      'Exportación a Excel (.xlsx) con un click',
+      'Vista de impresión optimizada',
     ],
   },
   {
     phase: 'Fase 07',
-    title: 'Notificaciones & recordatorios',
-    price: '$80.000',
-    status: 'pending',
+    title: 'Gestión de clientes (CRM)',
+    status: 'done',
     items: [
-      'Recordatorio de turno por WhatsApp (Twilio / Meta API)',
-      'Confirmación automática al reservar',
-      'Notificación al barbero asignado',
-      'Panel de control de mensajes enviados',
+      'Listado de clientes con búsqueda en tiempo real',
+      'Perfil de cliente: historial de turnos y compras',
+      'Acceso directo a WhatsApp del cliente',
+      'Estado de cada turno en el perfil',
+      'Exportación del listado completo a Excel',
+      'Paginación para bases de datos grandes',
     ],
   },
   {
     phase: 'Fase 08',
+    title: 'Sistema de autenticación',
+    status: 'done',
+    items: [
+      'Login con usuario y contraseña',
+      'Autenticación JWT conectada a backend',
+      'Roles diferenciados (admin / barbero)',
+      'Rutas protegidas — sin acceso sin login',
+      'Logout y manejo de sesión',
+    ],
+  },
+  {
+    phase: 'Fase 09',
+    title: 'Temas y personalización visual',
+    status: 'done',
+    items: [
+      'Modo claro / oscuro con toggle en tiempo real',
+      'Colores de acento: Neutro, Dorado, Violeta, Azul, Esmeralda, Rojo',
+      'Persistencia de preferencias por usuario',
+      'Aplicación del acento en toda la interfaz via CSS variables',
+      'Previsualización del color antes de confirmar',
+    ],
+  },
+  {
+    phase: 'Fase 10',
+    title: 'Web de reservas para clientes',
+    status: 'done',
+    items: [
+      'Landing pública de la barbería para que los clientes reserven solos',
+      'Flujo paso a paso: barbero → servicio → fecha → datos personales',
+      'Slots disponibles generados según horario y breaks del barbero',
+      'Días bloqueados configurables (feriados, vacaciones)',
+      'Captcha Cloudflare Turnstile para evitar spam',
+      'Pantalla de confirmación con resumen del turno',
+      'Páginas: "Mis turnos" y "Cancelar turno" para el cliente',
+    ],
+  },
+  {
+    phase: 'Fase 11',
+    title: 'Preview & simulador de dispositivos',
+    status: 'done',
+    items: [
+      'Pantalla de preview con simulador de iPhone y Android',
+      'Cambio entre dispositivos (iPhone 14, iPhone SE, Galaxy S23)',
+      'Vista previa de todas las pantallas del sistema dentro del frame',
+      'Toggle entre vista mobile y desktop',
+    ],
+  },
+  {
+    phase: 'Fase 12',
+    title: 'Backend + base de datos real',
+    status: 'active',
+    items: [
+      'API REST con Node.js / Express',
+      'Base de datos PostgreSQL con Prisma ORM',
+      'Multi-tenant: cada barbería con sus datos en la nube',
+      'Migración de localStorage a base de datos real',
+      'Variables de entorno y deploy en servidor (Railway / Render)',
+    ],
+  },
+  {
+    phase: 'Fase 13',
+    title: 'Notificaciones por WhatsApp',
+    status: 'pending',
+    items: [
+      'Recordatorio automático de turno por WhatsApp (Twilio / Meta API)',
+      'Confirmación al cliente al momento de reservar',
+      'Notificación al barbero asignado',
+      'Panel de historial de mensajes enviados',
+    ],
+  },
+  {
+    phase: 'Fase 14',
     title: 'App móvil (PWA / Android)',
-    price: '$150.000',
     status: 'pending',
     items: [
       'Configuración PWA instalable desde el navegador',
@@ -111,14 +172,14 @@ const phases = [
 ]
 
 const statusStyles = {
-  done:    { dot: 'bg-white',              label: 'Completado',   text: 'text-white/50',  title: 'text-white',    desc: 'text-white/40'  },
-  active:  { dot: 'bg-white animate-pulse', label: 'En progreso', text: 'text-white/70',  title: 'text-white',    desc: 'text-white/50'  },
-  pending: { dot: 'bg-white/10',           label: 'Pendiente',    text: 'text-white/20',  title: 'text-white/25', desc: 'text-white/15'  },
+  done:    { dot: 'bg-white',               label: 'Completado',   text: 'text-white/50',  title: 'text-white',    desc: 'text-white/40' },
+  active:  { dot: 'bg-white animate-pulse', label: 'En progreso',  text: 'text-white/70',  title: 'text-white',    desc: 'text-white/50' },
+  pending: { dot: 'bg-white/10',            label: 'Pendiente',    text: 'text-white/20',  title: 'text-white/25', desc: 'text-white/15' },
 }
 
 export function Roadmap() {
-  const totalDone    = phases.filter(p => p.status === 'done').reduce((s, p) => s + parsePesos(p.price), 0)
-  const totalPending = phases.filter(p => p.status !== 'done').reduce((s, p) => s + parsePesos(p.price), 0)
+  const done    = phases.filter(p => p.status === 'done').length
+  const pending = phases.filter(p => p.status === 'pending').length
 
   return (
     <section className="bg-black border-t border-white/10 py-24 px-6">
@@ -129,20 +190,25 @@ export function Roadmap() {
           Roadmap
         </h2>
         <p className="text-white/30 text-sm mb-12 max-w-lg">
-          Cada fase es una entrega funcional y cobrable. El sistema crece incrementalmente sin interrumpir lo que ya funciona.
+          Cada fase es una entrega funcional e independiente. El sistema crece incrementalmente sin interrumpir lo que ya funciona.
         </p>
 
         {/* Summary */}
-        <div className="grid grid-cols-2 gap-3 mb-16">
+        <div className="grid grid-cols-3 gap-3 mb-16">
           <div className="border border-white/10 rounded-lg p-5">
-            <p className="text-white/30 text-xs uppercase tracking-widest mb-2">Desarrollado</p>
-            <p className="text-white font-black text-2xl tracking-tight">{fmt(totalDone)}</p>
-            <p className="text-white/20 text-xs mt-1">5 fases entregadas</p>
+            <p className="text-white/30 text-xs uppercase tracking-widest mb-2">Completadas</p>
+            <p className="text-white font-black text-3xl tracking-tight">{done}</p>
+            <p className="text-white/20 text-xs mt-1">fases entregadas</p>
           </div>
           <div className="border border-white/10 rounded-lg p-5">
-            <p className="text-white/30 text-xs uppercase tracking-widest mb-2">Por cotizar</p>
-            <p className="text-white/50 font-black text-2xl tracking-tight">{fmt(totalPending)}</p>
-            <p className="text-white/20 text-xs mt-1">3 fases en roadmap</p>
+            <p className="text-white/30 text-xs uppercase tracking-widest mb-2">En progreso</p>
+            <p className="text-white font-black text-3xl tracking-tight">1</p>
+            <p className="text-white/20 text-xs mt-1">fase activa</p>
+          </div>
+          <div className="border border-white/10 rounded-lg p-5">
+            <p className="text-white/30 text-xs uppercase tracking-widest mb-2">Pendientes</p>
+            <p className="text-white/40 font-black text-3xl tracking-tight">{pending}</p>
+            <p className="text-white/20 text-xs mt-1">fases por venir</p>
           </div>
         </div>
 
@@ -155,21 +221,14 @@ export function Roadmap() {
               const s = statusStyles[p.status as keyof typeof statusStyles]
               return (
                 <div key={i} className="flex gap-8 relative">
-                  {/* Dot */}
                   <div className="flex-shrink-0 mt-1.5">
                     <div className={`w-[15px] h-[15px] rounded-full border border-white/20 ${s.dot}`} />
                   </div>
 
-                  {/* Content */}
                   <div className="pb-2 flex-1">
-                    <div className="flex items-center justify-between gap-3 mb-1 flex-wrap">
-                      <div className="flex items-center gap-3">
-                        <span className="text-white/20 text-xs font-mono tracking-widest">{p.phase}</span>
-                        <span className={`text-[10px] tracking-widest uppercase ${s.text}`}>— {s.label}</span>
-                      </div>
-                      <span className={`text-xs font-mono font-bold ${p.status === 'done' ? 'text-white/60' : p.status === 'active' ? 'text-white/50' : 'text-white/15'}`}>
-                        {p.price}
-                      </span>
+                    <div className="flex items-center gap-3 mb-1 flex-wrap">
+                      <span className="text-white/20 text-xs font-mono tracking-widest">{p.phase}</span>
+                      <span className={`text-[10px] tracking-widest uppercase ${s.text}`}>— {s.label}</span>
                     </div>
 
                     <h3 className={`text-lg font-bold tracking-tight mb-3 ${s.title}`}>
@@ -194,12 +253,4 @@ export function Roadmap() {
       </div>
     </section>
   )
-}
-
-function parsePesos(str: string) {
-  return parseInt(str.replace(/\./g, '').replace('$', ''), 10)
-}
-
-function fmt(n: number) {
-  return new Intl.NumberFormat('es-AR', { style: 'currency', currency: 'ARS', maximumFractionDigits: 0 }).format(n)
 }
