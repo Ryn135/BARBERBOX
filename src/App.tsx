@@ -34,7 +34,7 @@ function LandingPage() {
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/BARBERBOX">
       <Routes>
         {/* Landing */}
         <Route path="/" element={<LandingPage />} />

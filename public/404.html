@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <script>
+      // Redirige rutas de GitHub Pages al index con el path como query param
+      var path = window.location.pathname.replace('/BARBERBOX', '') || '/';
+      window.location.replace('/BARBERBOX/?p=' + encodeURIComponent(path));
+    </script>
+  </head>
+  <body></body>
+</html>
