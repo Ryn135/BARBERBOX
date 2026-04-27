@@ -128,7 +128,7 @@ export function DashboardPage() {
       <div className="flex items-center justify-between flex-wrap gap-3">
         <div>
           <h1 className="text-xl font-black uppercase tracking-tight">Dashboard Financiero</h1>
-          <p className="text-white/30 text-sm mt-0.5">FUTURES Barber Studio</p>
+          <p className="text-white/30 text-sm mt-0.5">BarberBox</p>
         </div>
         <div className="flex gap-1 bg-white/5 border border-white/10 rounded p-1">
           {(Object.keys(RANGE_LABELS) as Range[]).map((r) => (
