@@ -31,7 +31,7 @@ export const useAppointmentStore = create<AppointmentStore>()(
       },
     }),
     {
-      name: 'demo_appointments',
+      name: 'barber_appointments',
       merge: (persisted: unknown, current) => {
         const p = (persisted ?? {}) as Partial<AppointmentStore>
         return {

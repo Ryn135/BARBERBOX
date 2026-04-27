@@ -58,7 +58,7 @@ export const useConfigStore = create<ConfigStore>()(
       },
     }),
     {
-      name: 'demo_config',
+      name: 'barber_config',
       merge: (persisted: unknown, current) => {
         const p = (persisted ?? {}) as Partial<ConfigStore>
         return {

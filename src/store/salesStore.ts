@@ -50,7 +50,7 @@ export const useSalesStore = create<SalesStore>()(
       },
     }),
     {
-      name: 'demo_sales',
+      name: 'barber_sales',
       merge: (persisted: unknown, current) => {
         const p = (persisted ?? {}) as Partial<SalesStore>
         return {
