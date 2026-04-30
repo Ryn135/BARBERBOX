@@ -1,15 +1,11 @@
 import { useNavigate } from 'react-router-dom'
-import { Waves } from '@/components/ui/wave-background'
+import { ParticlesBackground } from '@/components/ui/particles-background'
 
 export function Hero() {
   const navigate = useNavigate()
   return (
     <section className="relative w-full h-screen overflow-hidden bg-black">
-      <Waves
-        strokeColor="#ffffff"
-        backgroundColor="#000000"
-        pointerSize={0.5}
-      />
+      <ParticlesBackground />
 
       {/* Overlay gradient bottom */}
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black pointer-events-none z-10" />
